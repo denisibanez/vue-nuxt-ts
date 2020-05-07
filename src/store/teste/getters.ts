@@ -1,5 +1,5 @@
 export default {
   list(state: any) {
-    return state.list
-  }
-}
+    return state.list;
+  },
+};

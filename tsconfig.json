@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "target": "es2018",
+    "target": "es2015",
     "module": "esnext",
     "moduleResolution": "node",
     "lib": [
@@ -16,12 +16,12 @@
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./src/*"
-      ],
       "@/*": [
-        "./src/*"
-      ]
+        "src/*"
+      ],
+      "components/*": [
+        "src/components/*"
+      ],
     },
     "types": [
       "@types/node",
@@ -32,7 +32,8 @@
     "node_modules"
   ],
   "include": [
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/**/*.ts",
   ],
   "files": [
     "vue-shims.d.ts"

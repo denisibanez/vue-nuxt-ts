@@ -1,5 +1,7 @@
+import ListModel from '@/models/list.model.ts';
+
 export default {
-  addList(context: any, param: any) {
-    context.commit('addList', param)
-  }
-}
+  addList(context: any, param: ListModel) {
+    context.commit('addList', param);
+  },
+};

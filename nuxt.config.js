@@ -1,7 +1,7 @@
 
 const env = require('dotenv').config()
 export default {
-  mode: 'spa',
+  mode: 'universal',
   env: env.parsed,
   srcDir: 'src/',
   /*
@@ -55,7 +55,56 @@ export default {
   },
   /*
   ** Build configuration
-  */
+*/
+  resolve: {
+    extensions: [
+      '.js', '.ts', '.vue'
+    ],
+    alias: {
+      '@': 'src'
+    }
+  },
+  typescript: {
+    typeCheck: {
+      eslint: true,
+      vue: true
+    }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        loader: 'vue-loader',
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 1000, // 1kB
+          name: 'img/[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 1000, // 1kB
+          name: 'fonts/[name].[hash:7].[ext]'
+        }
+      }
+    ],
+  },
   build: {
     /*
     ** You can extend webpack config here

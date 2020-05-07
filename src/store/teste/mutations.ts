@@ -1,5 +1,7 @@
+import ListModel from '@/models/list.model.ts';
+
 export default {
-  addList (state:any, param:any) {
-    state.list.push(param)
-  }
-}
+  addList(state:any, param: ListModel) {
+    state.list.push(param);
+  },
+};

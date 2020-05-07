@@ -12,6 +12,14 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "no-console": "off"
-  }
+    "no-console": "off",
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+  },
+  settings: {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".vue"]
+      }
+    }
+  },
 }

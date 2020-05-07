@@ -1,3 +1,5 @@
+import ListModel from '@/models/list.model.ts';
+
 export default () => ({
-  list: [{ teste: 'teste' }]
-})
+  list: [ListModel],
+});

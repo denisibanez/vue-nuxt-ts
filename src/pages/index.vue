@@ -29,50 +29,72 @@
 </template>
 
 <script lang="ts">
-import { mapGetters, mapActions } from 'vuex'
-import { Vue, Component } from 'vue-property-decorator'
-import Logo from '@/components/Logo'
-import Services from '@/services/services'
+import { mapGetters, mapActions } from 'vuex';
+
+import { Vue, Component } from 'vue-property-decorator';
+
+import Services from '@/services/services';
+
+const Logo = () => import('@/components/Logo');
 
 @Component({
   components: {
-    "Logo": Logo
+    Logo,
   },
 
   computed: {
     ...mapGetters<any>({
-      list: 'teste/list'
-    })
+      list: 'teste/list',
+    }),
   },
 
   methods: {
     ...mapActions<any>({
-      addList: 'teste/addList'
-    })
-  }
+      addList: 'teste/addList',
+    }),
+  },
 })
+
 export default class Home extends Vue {
-  firtsName: string =  'Denis'
-  lastName: string = 'Ibanez'
-  services: any
+  firtsName: string = 'Denis';
+
+  lastName: string = 'Ibanez';
+
+  services: any;
 
   get fullName(): string {
-    return `${this.firtsName} ${this.lastName}`
+    return `${this.firtsName} ${this.lastName}`;
   }
+
+  /* use SSR
+  asyncData(
+    isDev: any,
+    route: any,
+    store: any,
+    env: any,
+    params:any,
+    query:any,
+    req:any,
+    res:any,
+    redirect:any,
+    error:any
+  ) {
+  console.log(store, route);
+  } */
 
   created() {
     console.log((this as any).list);
-    (this as any).addList({ teste: 'teste param '})
-    console.log((this as any).list)
-    this.services = new Services()
+    (this as any).addList('teste param');
+    console.log((this as any).list);
+    this.services = new Services();
     this.services.getExample('100/json').then((response: any) => {
-      console.log(response.data)
+      console.log(response.data);
     }).catch((error: any) => {
-      console.log(error)
+      console.log(error);
     }).finally(() => {
-    })
+    });
   }
-};
+}
 </script>
 
 <style>
