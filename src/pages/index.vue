@@ -50,7 +50,7 @@ const Logo = () => import('@/components/Logo');
 
   methods: {
     ...mapActions<any>({
-      addList: 'teste/addList',
+      addListAction: 'teste/addListAction',
     }),
   },
 })
@@ -84,7 +84,7 @@ export default class Home extends Vue {
 
   created() {
     console.log((this as any).list);
-    (this as any).addList('teste param');
+    (this as any).addListAction('teste param');
     console.log((this as any).list);
     this.services = new Services();
     this.services.getExample('100/json').then((response: any) => {
