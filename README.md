@@ -20,7 +20,7 @@ $ npm run generate
 
 # Use
 > Vue Cli 2
-> Nuxt
+> Nuxt/SSR
 > Typescript (optional)
 > VueX
 > Decorators (optional) - [vue-class-component, vue-property-decorator"]
@@ -29,7 +29,7 @@ $ npm run generate
 > SCSS
 > Commitizen (optional git cz)
 > Axios
-> ESLINT (AIRBNB) ... Comming Soon
+> ESLINT (AIRBNB)
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
