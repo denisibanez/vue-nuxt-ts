@@ -72,7 +72,7 @@ export default class Home extends Vue {
     }).finally(() => {
     })
   }
-}
+};
 </script>
 
 <style>
