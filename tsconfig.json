@@ -35,8 +35,7 @@
     "src/**/*.vue"
   ],
   "files": [
-    "vue-shims.d.ts",
-    "src/store/index.js"
+    "vue-shims.d.ts"
   ]
 }
  
