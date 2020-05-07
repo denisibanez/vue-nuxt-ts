@@ -17,10 +17,10 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "./*"
+        "./src/*"
       ],
       "@/*": [
-        "./*"
+        "./src/*"
       ]
     },
     "types": [
@@ -32,11 +32,11 @@
     "node_modules"
   ],
   "include": [
-    "./**/*.vue"
+    "src/**/*.vue"
   ],
   "files": [
     "vue-shims.d.ts",
-    "store/index.js"
+    "src/store/index.js"
   ]
 }
  
