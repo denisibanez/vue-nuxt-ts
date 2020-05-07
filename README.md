@@ -2,19 +2,6 @@
 
 > My glorious Nuxt.js project
 
-#Use
-> Vue Cli 2
-> Nuxt
-> Typescript (optional)
-> VueX
-> Decorators (optional) - [vue-class-component, vue-property-decorator"]
-> Jest
-> Vue Bootstrap
-> SCSS
-> Commitizen (optional git cz)
-> Axios
-> ESLINT (AIRBNB) ... Comming Soon
-
 ## Build Setup
 
 ```bash
@@ -30,6 +17,19 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# Use
+> Vue Cli 2
+> Nuxt
+> Typescript (optional)
+> VueX
+> Decorators (optional) - [vue-class-component, vue-property-decorator"]
+> Jest
+> Vue Bootstrap
+> SCSS
+> Commitizen (optional git cz)
+> Axios
+> ESLINT (AIRBNB) ... Comming Soon
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
